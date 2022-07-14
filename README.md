@@ -1,5 +1,11 @@
 # Navigation Example
 
+## アプリ作成時のコマンド（備忘録用）
+
+```
+$ npx create-react-native-app <appname>
+```
+
 <p>
   <!-- iOS -->
   <a href="https://itunes.apple.com/app/apple-store/id982107779">
