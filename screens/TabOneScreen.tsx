@@ -1,12 +1,20 @@
-import { StyleSheet } from "react-native";
-
+import { Button, StyleSheet } from "react-native";
 import { EditScreenInfo } from "../components/EditScreenInfo";
 import { Text, View } from "../components/Themed";
+import { useLocalizationContext } from "../locales/locales";
 
 export default function TabOneScreen() {
+  const { t, setLocale } = useLocalizationContext();
+
   return (
     <View style={styles.container}>
-      <Text style={styles.title}>Tab One</Text>
+      <Text style={styles.title}>{t("welcome")}</Text>
+      <Button
+        onPress={() => {
+          setLocale("en");
+        }}
+        title="change"
+      />
       <View
         style={styles.separator}
         lightColor="#eee"
