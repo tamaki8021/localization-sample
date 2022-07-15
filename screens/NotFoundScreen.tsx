@@ -1,6 +1,11 @@
 import { StyleSheet, Text, TouchableOpacity, View } from "react-native";
+import type { NativeStackNavigationProp } from "@react-navigation/native-stack";
+import { RootStackParamList } from "../navigation/RootNavigator";
+import { VFC } from "react";
 
-export default function NotFoundScreen({ navigation }) {
+type Props = NativeStackNavigationProp<RootStackParamList, "NotFound">;
+
+export const NotFoundScreen: VFC<Props> = (navigation) => {
   return (
     <View style={styles.container}>
       <Text style={styles.title}>This screen doesn't exist.</Text>
@@ -12,7 +17,7 @@ export default function NotFoundScreen({ navigation }) {
       </TouchableOpacity>
     </View>
   );
-}
+};
 
 const styles = StyleSheet.create({
   container: {

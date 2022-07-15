@@ -1,11 +1,16 @@
 import * as WebBrowser from "expo-web-browser";
+import { VFC } from "react";
 import { StyleSheet, TouchableOpacity } from "react-native";
 
 import Colors from "../constants/Colors";
 import { MonoText } from "./StyledText";
 import { Text, View } from "./Themed";
 
-export default function EditScreenInfo({ path }) {
+type Props = {
+  path: string
+}
+
+export const EditScreenInfo:VFC<Props> = ({ path }) => {
   return (
     <View>
       <View style={styles.getStartedContainer}>
@@ -47,7 +52,7 @@ export default function EditScreenInfo({ path }) {
   );
 }
 
-function handleHelpPress() {
+const handleHelpPress = () => {
   WebBrowser.openBrowserAsync(
     "https://docs.expo.dev/get-started/create-a-new-app/#opening-the-app-on-your-phonetablet"
   );

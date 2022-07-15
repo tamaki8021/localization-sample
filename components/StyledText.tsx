@@ -1,11 +1,14 @@
-import { Platform } from "react-native";
+import { Platform, TextStyle } from "react-native";
 
 import { Text } from "./Themed";
 
-export function MonoText(props) {
+type Props = {
+  style?: TextStyle;
+};
+
+export const MonoText: React.FC<Props> = (props) => {
   return (
     <Text
-      {...props}
       style={[
         props.style,
         {
@@ -20,4 +23,4 @@ export function MonoText(props) {
       ]}
     />
   );
-}
+};
