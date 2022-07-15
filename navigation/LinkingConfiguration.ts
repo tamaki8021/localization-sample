@@ -4,8 +4,10 @@
  * https://reactnavigation.org/docs/configuring-links
  */
 import * as Linking from "expo-linking";
+import { LinkingOptions } from "@react-navigation/native";
+import { RootStackParamList } from "./RootNavigator";
 
-export default {
+export const LinkingConfiguration: LinkingOptions<RootStackParamList> =  {
   prefixes: [Linking.createURL("/")],
   config: {
     screens: {
